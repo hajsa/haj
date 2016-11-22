@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".servicios .thumbs").hover(function(){$(".active").removeClass("active"),$(this).addClass("active")})});

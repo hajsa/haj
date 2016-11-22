@@ -1,0 +1,36 @@
+.wrapper .button-haj {
+  border-radius: 100px;
+  background-color: #4696DD;
+  border-color: #4696DD; }
+
+.nav {
+  width: 100%;
+  background: red;
+  margin: 0 auto; }
+  .nav ul {
+    list-style-type: none;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    display: table;
+    overflow: hidden; }
+    .nav ul li {
+      float: left;
+      padding: 3px;
+      display: inline-block;
+      margin: 0 auto; }
+
+.hero {
+  margin: 20px; }
+  .hero .logo-color {
+    color: #1F68A8; }
+
+.footer {
+  height: 50px;
+  margin-top: 20px;
+  background: #ddd;
+  width: 100%;
+  border-radius: 4px 4px 0 0; }
+  .footer p {
+    margin-top: 15px;
+    color: #484848; }
