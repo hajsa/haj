@@ -1,6 +1,36 @@
 $(document).ready(function() {
 	
+//slider
+	
+	
+		
+		
 
+	
+
+////////////////////
+
+
+$('.hero .caca').click(function(event) {
+
+		
+		console.log('slider().amount : '+slider().amount);
+		console.log(
+			'currentSlide*100+"%":  '+
+			currentSlide*100+'%'
+
+			);
+		
+
+		
+
+});
+
+
+
+
+
+//////////////
 
 
 

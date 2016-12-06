@@ -843,6 +843,9 @@ html, body {
     -webkit-box-sizing-left: 0;
     -webkit-box-sizing-right: 0; }
 
+*, *:before, *:after {
+  box-sizing: inherit; }
+
 .hide {
   display: none; }
 
@@ -851,44 +854,204 @@ html, body {
   top: 0rem;
   right: 0rem;
   width: 100%;
-  margin-top: 1rem;
+  margin-top: 1.2rem;
   margin-right: 2rem;
-  text-align: right; }
+  text-align: right;
+  z-index: 999; }
+  .nave .whiter {
+    position: relative;
+    background: white;
+    right: -2rem;
+    top: -2rem;
+    width: 100%;
+    height: 5.7rem;
+    border-bottom: 1px solid #E0E0E0; }
+    .nave .whiter .buttons {
+      margin-top: 0.7rem;
+      margin-right: 1rem; }
+      .nave .whiter .buttons ul {
+        list-style: none;
+        position: relative;
+        font-size: 0; }
+        .nave .whiter .buttons ul li {
+          cursor: pointer;
+          margin: 0;
+          position: relative;
+          display: inline-block;
+          text-align: center; }
+          .nave .whiter .buttons ul li:hover a {
+            color: white; }
+          .nave .whiter .buttons ul li ul {
+            position: absolute;
+            margin: 0 auto;
+            margin-top: -0.1rem;
+            background: white;
+            background: rgba(255, 255, 255, 0.9);
+            min-width: 100%; }
+            .nave .whiter .buttons ul li ul li {
+              display: none;
+              margin: 0;
+              text-align: left;
+              border-bottom: 0.1rem solid rgba(242, 242, 242, 0.7); }
+              .nave .whiter .buttons ul li ul li:last-child {
+                border-bottom: none; }
+              .nave .whiter .buttons ul li ul li:hover a {
+                color: white; }
+              .nave .whiter .buttons ul li ul li a {
+                padding: 0 1rem;
+                margin: 0; }
+            .nave .whiter .buttons ul li ul .submenuitem a {
+              color: #4696DD; }
+          .nave .whiter .buttons ul li:hover {
+            background: #77B2E6; }
+            .nave .whiter .buttons ul li:hover li {
+              display: block; }
+        .nave .whiter .buttons ul .active {
+          background: #77B2E6; }
+          .nave .whiter .buttons ul .active a {
+            color: white; }
+          .nave .whiter .buttons ul .active li a {
+            color: #4696DD; }
   .nave button, .nave .button-primary {
     padding: 0 1.5rem;
     background: transparent;
     border-color: transparent;
     border-radius: 0rem;
     color: #4696DD;
-    margin-top: 1rem; }
-    .nave button:hover, .nave .button-primary:hover {
+    margin-right: 0;
+    margin-top: 1rem;
+    border: none; }
+    .nave button:hover, .nave button:focus, .nave .button-primary:hover, .nave .button-primary:focus {
       border-color: transparent;
-      background: #4696DD;
-      border-radius: 1.5rem; }
+      background: none;
+      color: #4696DD; }
   .nave .logo {
     position: fixed;
     left: 1rem;
     top: 1rem; }
     .nave .logo img {
       margin-bottom: 10px; }
-  .nave .whiter {
-    position: relative;
-    background: white;
-    right: -2rem;
-    top: -1rem;
-    width: 100%; }
 
-.hero {
-  margin-top: 6rem;
-  height: 40rem;
-  background-image: url("../img/p1.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; }
-  .hero .1blueish {
-    width: 100%;
-    height: 100%;
-    background: rgba(70, 150, 221, 0.5); }
+@keyframes rotatespinner {
+  0% {
+    transform: rotate(0deg); }
+  75% {
+    transform: rotate(1080deg); }
+  100% {
+    transform: rotate(1440deg); } }
+
+.slidercontainer {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-top: 5.4rem; }
+  .slidercontainer .preloader {
+    left: 50%;
+    right: 50%;
+    top: 45%;
+    height: 10rem;
+    position: absolute;
+    z-index: 88;
+    animation: rotatespinner 2s ease-in-out infinite; }
+    .slidercontainer .preloader .spinner {
+      position: absolute;
+      padding: 1.2rem;
+      border-radius: 50%;
+      background: #77B2E6;
+      margin: 0 auto;
+      text-align: center;
+      top: 0;
+      right: 0;
+      left: 0; }
+    .slidercontainer .preloader .sp2 {
+      bottom: 0; }
+  .slidercontainer .left, .slidercontainer .right {
+    position: absolute;
+    padding: 4rem;
+    bottom: 30%;
+    transition: all ease-in-out 0.3s;
+    z-index: 999; }
+    .slidercontainer .left p, .slidercontainer .right p {
+      font-size: 3.5rem;
+      line-height: 0;
+      color: rgba(0, 0, 0, 0.6);
+      text-decoration: none;
+      cursor: pointer;
+      background: rgba(242, 242, 242, 0.5);
+      padding: 2.5rem 2rem 3rem 2rem;
+      transition: all ease-in-out 0.1s;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none; }
+  .slidercontainer .left {
+    left: -4rem; }
+    .slidercontainer .left:hover {
+      left: -5rem; }
+  .slidercontainer .right {
+    right: -4rem; }
+    .slidercontainer .right:hover {
+      right: -5rem; }
+  .slidercontainer .right:hover p, .slidercontainer .left:hover p {
+    color: black; }
+  .slidercontainer .imgselectors {
+    position: absolute;
+    bottom: 0;
+    left: 4rem;
+    margin: 3rem;
+    font-size: 0;
+    z-index: 999; }
+    .slidercontainer .imgselectors .sq {
+      display: inline-block;
+      position: relative;
+      margin: 0.5rem;
+      background: rgba(242, 242, 242, 0.4);
+      padding: 0.9rem;
+      cursor: pointer;
+      transition: all ease-in-out 1.2s;
+      transition: top ease-in-out 0.3s;
+      border-radius: 30%;
+      top: 0;
+      border: 2px solid lightgray; }
+      .slidercontainer .imgselectors .sq:hover {
+        padding: 1.1rem;
+        background: rgba(119, 178, 230, 0.8);
+        top: 0.05rem; }
+    .slidercontainer .imgselectors .active {
+      padding: 1.1rem;
+      background: #4696DD;
+      top: 0.05rem; }
+      .slidercontainer .imgselectors .active:hover {
+        background: #4696DD; }
+  .slidercontainer .imgcontainer {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    font-size: 0;
+    position: relative;
+    left: 0;
+    transition: left ease-in-out 1s;
+    z-index: 99; }
+    .slidercontainer .imgcontainer .slides {
+      transition: all ease-in-out 0.3s;
+      display: inline-block;
+      height: 500px;
+      height: 50vh;
+      min-height: 40rem;
+      position: relative;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover; }
+    .slidercontainer .imgcontainer .slide1 {
+      background-image: url("../img/p1.jpg"); }
+    .slidercontainer .imgcontainer .slide2 {
+      background-image: url("../img/p2.jpg"); }
+    .slidercontainer .imgcontainer .slide3 {
+      background-image: url("../img/p3.jpg"); }
+    .slidercontainer .imgcontainer .slide4 {
+      background-image: url("../img/p4.jpg"); }
 
 .about {
   text-align: center;
@@ -898,7 +1061,7 @@ html, body {
     margin: 0 auto;
     color: #4696DD; }
     .about .title h1 {
-      font-size: 6.5rem; }
+      font-size: 5.3rem; }
   .about .text {
     color: #989898;
     font-size: 2rem;
@@ -915,7 +1078,7 @@ html, body {
 .servicios {
   text-align: center;
   font-size: 0;
-  cursor: pointer;
+  cursor: default;
   margin-top: 4rem; }
   .servicios .thumbs {
     display: inline-block;
@@ -937,7 +1100,12 @@ html, body {
       margin-top: 1rem;
       color: #989898;
       text-decoration: none;
-      margin-bottom: 2rem; }
+      margin: 1rem auto;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      width: 10rem; }
+      .servicios .thumbs a:hover {
+        text-decoration: underline; }
   .servicios .active {
     background: #4696DD;
     color: white; }
@@ -951,6 +1119,43 @@ html, body {
 .representaciones {
   color: #989898;
   text-align: center; }
+  .representaciones .caption hr {
+    width: 40%; }
+  .representaciones .country > div {
+    display: none; }
+  .representaciones .country .active {
+    display: block; }
+  .representaciones .sub button {
+    color: #4696DD;
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: inline-block;
+    margin-left: 0.6rem;
+    margin-right: 0.6rem; }
+    .representaciones .sub button:hover {
+      color: white; }
+  .representaciones .sub button, .representaciones .sub .button-primary {
+    padding: 0 1.1rem;
+    background: transparent;
+    border-color: transparent;
+    border-radius: 0rem;
+    color: #4696DD;
+    margin-top: 0rem; }
+    .representaciones .sub button:hover, .representaciones .sub .button-primary:hover {
+      border-color: transparent;
+      background: #95C3EC;
+      background: rgba(70, 150, 221, 0.6);
+      border-radius: 0; }
+  .representaciones .sub .active {
+    border-color: transparent;
+    background: #77B2E6;
+    border-radius: 0;
+    color: white; }
+    .representaciones .sub .active:hover {
+      background: #4696DD; }
+  .representaciones .sub p {
+    display: inline-block;
+    margin-right: 1rem; }
   .representaciones img {
     margin: 2rem;
     cursor: pointer; }
@@ -959,14 +1164,17 @@ html, body {
     color: #4696DD;
     padding: 1rem; }
     .representaciones a:hover {
-      color: #19558A; }
+      color: #19558A;
+      text-decoration: underline; }
   .representaciones hr {
     width: 70%; }
   .representaciones h3 {
     color: #4696DD; }
 
 .contacto {
-  text-align: center; }
+  text-align: center;
+  margin-top: 7rem;
+  margin-top: 30vh; }
   .contacto input, .contacto textarea {
     width: 70%; }
   .contacto button {
@@ -975,13 +1183,29 @@ html, body {
     width: 70%; }
   .contacto h3 {
     color: #4696DD; }
+  .contacto .contact-form {
+    margin-top: 2rem; }
+    .contacto .contact-form button, .contacto .contact-form .button-primary {
+      padding: 0 1.5rem;
+      background: #4696DD;
+      border-color: transparent;
+      border-radius: 1.5rem;
+      color: white;
+      margin-top: 1rem; }
+      .contacto .contact-form button:hover, .contacto .contact-form button:focus, .contacto .contact-form button:active, .contacto .contact-form .button-primary:hover, .contacto .contact-form .button-primary:focus, .contacto .contact-form .button-primary:active {
+        border-color: transparent;
+        background: #77B2E6;
+        border-radius: 1.5rem; }
 
 .footer {
-  height: 50px;
-  margin-top: 20px;
-  background: #ddd;
-  width: 100%;
-  border-radius: 4px 4px 0 0; }
+  margin-left: 1rem;
+  background: #77B2E6;
+  color: white;
+  margin: 0;
+  height: 4.5rem; }
   .footer p {
-    margin-top: 15px;
-    color: #484848; }
+    position: absolute;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 0;
+    font-weight: bold; }
