@@ -872,20 +872,43 @@ html, body {
     right: -2rem;
     top: -2rem;
     width: 100%;
-    height: 5.7rem;
+    height: 6.5rem;
     border-bottom: 1px solid #E0E0E0; }
+    .nave .whiter .smallnav {
+      display: none;
+      margin-top: 0.5rem;
+      width: 60%;
+      position: relative;
+      top: 1.2rem;
+      margin-right: 1rem;
+      text-align: center; }
+      .nave .whiter .smallnav:hover, .nave .whiter .smallnav:focus {
+        border-color: #4696DD; }
+      @media only screen and (max-width: 905px) {
+        .nave .whiter .smallnav {
+          display: inline-block; } }
     .nave .whiter .logo {
-      position: absolute;
       left: 1rem;
-      top: 1rem;
+      top: 1.7rem;
       z-index: 9999; }
-      .nave .whiter .logo a {
-        position: relative; }
-        .nave .whiter .logo a img {
-          position: absolute; }
+      .nave .whiter .logo a img {
+        position: absolute;
+        left: 1rem;
+        top: 1.7rem;
+        max-width: 25%; }
+        @media only screen and (max-width: 905px) {
+          .nave .whiter .logo a img {
+            display: inline-block; } }
+        @media only screen and (max-width: 680px) {
+          .nave .whiter .logo a img {
+            top: 2.3rem; } }
     .nave .whiter .buttons {
+      display: inline-block;
       margin-top: 0.7rem;
       margin-right: 1rem; }
+      @media only screen and (max-width: 905px) {
+        .nave .whiter .buttons {
+          display: none; } }
       .nave .whiter .buttons ul {
         list-style: none;
         position: relative;
@@ -974,15 +997,16 @@ html, body {
       top: 0;
       right: 0;
       left: 0; }
-    .slidercontainer .preloader .sp2 {
-      bottom: 0; }
-  .slidercontainer .left, .slidercontainer .right {
+  .slidercontainer .controls .left, .slidercontainer .controls .right {
     position: absolute;
     padding: 4rem;
     bottom: 30%;
     transition: all ease-in-out 0.3s;
     z-index: 888; }
-    .slidercontainer .left p, .slidercontainer .right p {
+    @media only screen and (max-width: 680px) {
+      .slidercontainer .controls .left, .slidercontainer .controls .right {
+        bottom: 0; } }
+    .slidercontainer .controls .left p, .slidercontainer .controls .right p {
       font-size: 3.5rem;
       line-height: 0;
       color: rgba(0, 0, 0, 0.6);
@@ -997,15 +1021,15 @@ html, body {
       -moz-user-select: none;
       -ms-user-select: none;
       user-select: none; }
-  .slidercontainer .left {
+  .slidercontainer .controls .left {
     left: -4rem; }
-    .slidercontainer .left:hover {
+    .slidercontainer .controls .left:hover {
       left: -5rem; }
-  .slidercontainer .right {
+  .slidercontainer .controls .right {
     right: -4rem; }
-    .slidercontainer .right:hover {
+    .slidercontainer .controls .right:hover {
       right: -5rem; }
-  .slidercontainer .right:hover p, .slidercontainer .left:hover p {
+  .slidercontainer .controls .right:hover p, .slidercontainer .controls .left:hover p {
     color: black; }
   .slidercontainer .imgselectors {
     position: absolute;
@@ -1013,7 +1037,11 @@ html, body {
     left: 4rem;
     margin: 3rem;
     font-size: 0;
-    z-index: 888; }
+    z-index: 888;
+    width: 100%; }
+    @media only screen and (max-width: 680px) {
+      .slidercontainer .imgselectors {
+        display: none; } }
     .slidercontainer .imgselectors .sq {
       display: inline-block;
       position: relative;
@@ -1049,12 +1077,16 @@ html, body {
       transition: all ease-in-out 0.3s;
       display: inline-block;
       height: 500px;
-      height: 50vh;
-      min-height: 40rem;
+      height: 60vh;
+      min-height: 50rem;
       position: relative;
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover; }
+      @media only screen and (max-width: 680px) {
+        .slidercontainer .imgcontainer .slides {
+          height: 300px;
+          min-height: auto; } }
     .slidercontainer .imgcontainer .slide1 {
       background-image: url("../img/p1.jpg"); }
     .slidercontainer .imgcontainer .slide2 {
@@ -1066,13 +1098,14 @@ html, body {
 
 .about {
   text-align: center;
-  margin: 2rem auto; }
+  margin: 2rem auto;
+  width: 100%; }
   .about .title {
     max-width: 70%;
     margin: 0 auto;
     color: #4696DD; }
     .about .title h1 {
-      font-size: 5.3rem; }
+      font-size: 5rem; }
   .about .text {
     color: #989898;
     font-size: 2rem;
@@ -1090,7 +1123,8 @@ html, body {
   text-align: center;
   font-size: 0;
   cursor: default;
-  margin-top: 4rem; }
+  margin-top: 4rem;
+  overflow: hidden; }
   .servicios .thumbs {
     display: inline-block;
     width: 33.33333%;

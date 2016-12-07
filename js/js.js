@@ -1,6 +1,51 @@
 $(document).ready(function() {
 	
+///nave
 
+	
+
+	function buildSelectNav(dadLi,sonUl,sonLi,buttonTag,selectClass) {
+
+		var navArray = [];
+		$(dadLi).each(function() {
+
+			navArray.push($(this).children(buttonTag).text());
+
+			if ($(this).children().length > 1) {
+
+
+				$(this).children($(sonUl)).children($(sonLi)).children(buttonTag).each(function() {
+					var separator = '-- ';
+					separator += $(this).text();
+					navArray.push(separator);
+				});
+
+			}
+		});
+		for (var i = 0 ; i < navArray.length; i++) {
+			var option = '<option value="'
+				+navArray[i].split(' ').join('')
+				.replace('--', '').replace('ê','e').replace('ñ','n')
+				.replace('á','a').replace('é','e').replace('í','i')
+				.replace('ó','o').replace('ú','u')
+				.toLowerCase()
+				+'">'+navArray[i]
+				+'</option>';
+			$(selectClass).append(option);
+		}
+
+		
+
+
+		
+	}////////////
+	buildSelectNav('.menuitem', '.submenu', '.submenuitem','a','.smallnav');
+
+
+
+
+
+/////end nave
 
 
 
