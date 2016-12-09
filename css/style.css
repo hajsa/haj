@@ -884,7 +884,7 @@ html, body {
       text-align: center; }
       .nave .whiter .smallnav:hover, .nave .whiter .smallnav:focus {
         border-color: #4696DD; }
-      @media only screen and (max-width: 905px) {
+      @media only screen and (max-width: 925px) {
         .nave .whiter .smallnav {
           display: inline-block; } }
     .nave .whiter .logo {
@@ -896,7 +896,7 @@ html, body {
         left: 1rem;
         top: 1.7rem;
         max-width: 25%; }
-        @media only screen and (max-width: 905px) {
+        @media only screen and (max-width: 925px) {
           .nave .whiter .logo a img {
             display: inline-block; } }
         @media only screen and (max-width: 680px) {
@@ -906,7 +906,7 @@ html, body {
       display: inline-block;
       margin-top: 0.7rem;
       margin-right: 1rem; }
-      @media only screen and (max-width: 905px) {
+      @media only screen and (max-width: 925px) {
         .nave .whiter .buttons {
           display: none; } }
       .nave .whiter .buttons ul {
@@ -1007,6 +1007,7 @@ html, body {
       .slidercontainer .controls .left, .slidercontainer .controls .right {
         bottom: 0; } }
     .slidercontainer .controls .left p, .slidercontainer .controls .right p {
+      position: relative;
       font-size: 3.5rem;
       line-height: 0;
       color: rgba(0, 0, 0, 0.6);
@@ -1015,6 +1016,7 @@ html, body {
       background: rgba(242, 242, 242, 0.5);
       padding: 2.5rem 2rem 3rem 2rem;
       transition: all ease-in-out 0.1s;
+      transition: color ease-in-out 0.5s;
       -webkit-touch-callout: none;
       -webkit-user-select: none;
       -khtml-user-select: none;
@@ -1022,15 +1024,19 @@ html, body {
       -ms-user-select: none;
       user-select: none; }
   .slidercontainer .controls .left {
-    left: -4rem; }
+    left: -5.5rem; }
+    .slidercontainer .controls .left p {
+      left: 1rem; }
     .slidercontainer .controls .left:hover {
-      left: -5rem; }
+      left: -6.5rem; }
   .slidercontainer .controls .right {
-    right: -4rem; }
+    right: -5.5rem; }
+    .slidercontainer .controls .right p {
+      right: 1rem; }
     .slidercontainer .controls .right:hover {
-      right: -5rem; }
+      right: -6.5rem; }
   .slidercontainer .controls .right:hover p, .slidercontainer .controls .left:hover p {
-    color: black; }
+    color: #4696DD; }
   .slidercontainer .imgselectors {
     position: absolute;
     bottom: 0;
@@ -1076,17 +1082,10 @@ html, body {
     .slidercontainer .imgcontainer .slides {
       transition: all ease-in-out 0.3s;
       display: inline-block;
-      height: 500px;
-      height: 60vh;
-      min-height: 50rem;
       position: relative;
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover; }
-      @media only screen and (max-width: 680px) {
-        .slidercontainer .imgcontainer .slides {
-          height: 300px;
-          min-height: auto; } }
     .slidercontainer .imgcontainer .slide1 {
       background-image: url("../img/p1.jpg"); }
     .slidercontainer .imgcontainer .slide2 {
@@ -1106,6 +1105,9 @@ html, body {
     color: #4696DD; }
     .about .title h1 {
       font-size: 5rem; }
+      @media only screen and (max-width: 400px) {
+        .about .title h1 {
+          font-size: 3rem; } }
   .about .text {
     color: #989898;
     font-size: 2rem;
@@ -1131,6 +1133,12 @@ html, body {
     color: #989898;
     font-weight: bold;
     font-size: 1.3rem; }
+    @media only screen and (max-width: 650px) {
+      .servicios .thumbs {
+        width: 50%; } }
+    @media only screen and (max-width: 425px) {
+      .servicios .thumbs {
+        width: 100%; } }
     .servicios .thumbs h5 {
       margin-top: 2rem;
       color: #4696DD; }
@@ -1151,6 +1159,14 @@ html, body {
       width: 10rem; }
       .servicios .thumbs a:hover {
         text-decoration: underline; }
+  @media only screen and (max-width: 425px) {
+    .servicios .s1, .servicios .s3 {
+      background: #4696DD;
+      color: white; }
+      .servicios .s1 a, .servicios .s3 a {
+        color: white; }
+      .servicios .s1 h5, .servicios .s3 h5 {
+        color: white; } }
   .servicios .active {
     background: #4696DD;
     color: white; }
@@ -1158,6 +1174,14 @@ html, body {
       color: white; }
     .servicios .active h5 {
       color: white; }
+    @media only screen and (max-width: 425px) {
+      .servicios .active {
+        background: white;
+        color: #989898; }
+        .servicios .active a {
+          color: #989898; }
+        .servicios .active h5 {
+          color: #4696DD; } }
   .servicios .midwidth {
     width: 70%; }
 
@@ -1170,37 +1194,48 @@ html, body {
     display: none; }
   .representaciones .country .active {
     display: block; }
-  .representaciones .sub button {
-    color: #4696DD;
-    font-weight: bold;
-    font-size: 1.1rem;
-    display: inline-block;
-    margin-left: 0.6rem;
-    margin-right: 0.6rem; }
-    .representaciones .sub button:hover {
-      color: white; }
-  .representaciones .sub button, .representaciones .sub .button-primary {
-    padding: 0 1.1rem;
-    background: transparent;
-    border-color: transparent;
-    border-radius: 0rem;
-    color: #4696DD;
-    margin-top: 0rem; }
-    .representaciones .sub button:hover, .representaciones .sub .button-primary:hover {
+  .representaciones .sub {
+    position: relative; }
+    .representaciones .sub .vertiline {
+      position: absolute;
+      top: 0;
+      bottom: 1rem;
+      display: inline-block;
+      width: 1px;
+      background: #E0E0E0; }
+    .representaciones .sub button {
+      color: #19558A;
+      font-weight: bold;
+      font-size: 1.1rem;
+      display: inline-block;
+      margin: 1rem 2rem;
+      display: inline-block; }
+      .representaciones .sub button:hover {
+        color: white; }
+    .representaciones .sub button, .representaciones .sub .button-primary {
+      padding: 0 1.1rem;
+      background: transparent;
       border-color: transparent;
-      background: #95C3EC;
-      background: rgba(70, 150, 221, 0.6);
-      border-radius: 0; }
-  .representaciones .sub .active {
-    border-color: transparent;
-    background: #77B2E6;
-    border-radius: 0;
-    color: white; }
-    .representaciones .sub .active:hover {
-      background: #4696DD; }
-  .representaciones .sub p {
-    display: inline-block;
-    margin-right: 1rem; }
+      border-bottom: 1px solid #E0E0E0;
+      border-radius: 0rem;
+      color: #4696DD;
+      margin-top: 0rem; }
+      .representaciones .sub button:hover, .representaciones .sub .button-primary:hover {
+        background: #95C3EC;
+        background: white;
+        border-radius: 0;
+        color: #4696DD;
+        border-bottom: 1px solid #4696DD; }
+    .representaciones .sub .active {
+      border-bottom: 1px solid #4696DD;
+      background: white;
+      border-radius: 0;
+      color: #4696DD; }
+      .representaciones .sub .active:hover {
+        background: white; }
+    .representaciones .sub p {
+      display: inline-block;
+      margin-right: 1rem; }
   .representaciones img {
     margin: 2rem;
     cursor: pointer; }

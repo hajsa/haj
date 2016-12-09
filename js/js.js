@@ -71,11 +71,21 @@ $(document).ready(function() {
 
 //servicios
 	$('.servicios .thumbs').hover(function() {
-		$('.servicios .active').removeClass('active');
-		$(this).addClass('active');
+		
+		if ($(window).width()>425) {
+			$('.servicios .active').removeClass('active');
+			$(this).addClass('active');
+		}
+
+
 	});
 
-	
+
+
+$(window).resize(function(event) {
+	if ($(window).width()<=425) {
+	}
+});	
 
 
 

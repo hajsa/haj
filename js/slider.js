@@ -9,7 +9,9 @@ $(document).ready(function() {
 			left: $('.slidercontainer .slides').position().left,
 			dad: $('.slidercontainer .imgcontainer'),
 			sons: $('.slidercontainer .slides'),
-			sonwidth: $('.slidercontainer .slides').width()
+			sonwidth: $('.slidercontainer .slides').width(),
+			sonheight: $('.slidercontainer .slides').height(),
+			dadheight: $('.slidercontainer .imgcontainer').height()
 		}
 
 	}
@@ -125,13 +127,24 @@ $(document).ready(function() {
 	});
 
 ////////////			resizing
+
+
+
+
 	$(window).resize(function(event) {
 		slider().dad.css('width', dadWidth() + '%');
 		slider().sons.css('width', sonsWidth() + '%');
+		slider().sons.css('height', (((slider().sonwidth*440)/1024)-10)+'px');
+
 	});
 
 	slider().dad.css('width', dadWidth() + '%');
 	slider().sons.css('width', sonsWidth() + '%');
+	slider().sons.css('height', (((slider().sonwidth*440)/1024)-10)+'px');
+
+	
+
+	
 
 ///////////// append .SQuares
 
