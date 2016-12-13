@@ -15,7 +15,7 @@ $(document).ready(function() {
 
 
 				$(this).children($(sonUl)).children($(sonLi)).children(buttonTag).each(function() {
-					var separator = '-- ';
+					var separator = '--';
 					separator += $(this).text();
 					navArray.push(separator);
 				});
@@ -23,21 +23,25 @@ $(document).ready(function() {
 			}
 		});
 		for (var i = 0 ; i < navArray.length; i++) {
-			var option = '<option value="'
-				+navArray[i].split(' ').join('')
+			var item = navArray[i].split(' ').join('-')
 				.replace('--', '').replace('ê','e').replace('ñ','n')
 				.replace('á','a').replace('é','e').replace('í','i')
 				.replace('ó','o').replace('ú','u')
-				.toLowerCase()
-				+'">'+navArray[i]
-				+'</option>';
+				.toLowerCase();
+			if (item == 'inicio'|| item == 'espanol') {item = 'index';}
+			var option = '<option value="'
+						+item
+						+'.html">'+navArray[i]
+						+'</option>';
 			$(selectClass).append(option);
 		}
 
 		
 
 
-		
+		console.log(
+
+			);
 	}////////////
 	buildSelectNav('.menuitem', '.submenu', '.submenuitem','a','.smallnav');
 
