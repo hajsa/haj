@@ -1,9 +1,118 @@
 $(document).ready(function() {
-	
-///nave
 
-	
+//////	vars	///////
 
+	var userLang = (navigator.userLanguage||navigator.language).split('').slice(0,2).join('');
+	var navlangbutton = $('.nave .lang').html();
+
+
+
+//////	TRY AND ERROR	///////
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+//////	reload page
+	//setTimeout(location.reload(), 10000);
+	/*setTimeout(function() {
+		location.reload()
+	}, 1000);*/
+//////	language of language buttons
+	//userLang = 'es';///////remove to make it work
+//$('.scrollhelp').html('asd');
+//////	reload page
+	//setTimeout(location.reload(), 10000);
+	/*setTimeout(function() {
+		location.reload()
+	}, 1000);*/
+//////	language of language buttons
+	//userLang = 'es';///////remove to make it work
+/////////////////////////////////////////////////////////////////////////////////////////////////	
+
+
+
+
+//////	TRY AND ERROR END	///////
+
+
+
+
+//////	Functionality	///////
+
+	/// build mobile Nav	
+	buildSelectNav('.menuitem', '.submenu', '.submenuitem','a','.smallnav');
+
+	///	change language button for diferent clients
+	if (userLang== 'en') {
+		$('.lang').html('Language');
+
+	}else if (userLang== 'es'||userLang== 'pt') {
+		$('.lang').html('Idioma');
+	}else {
+		$('.lang').html('Language');
+	}
+	
+	if (navlangbutton != 'Language') {
+		$('.nave .buttons').css('margin-right', '20px');
+	}
+
+	///	.servicios hover anim
+	if (checkUserHref() == 'index.html') {
+		$('.servicios .thumbs').hover(function() {		
+			if ($(window).width()>425) {
+				$('.servicios .active').removeClass('active');
+				$(this).addClass('active');
+			}
+		});
+	}
+
+	///	representaciones buttons
+	if (checkUserHref() == 'index.html') {
+		$('.representaciones .sel-uy').click(function() {
+			$('.representaciones div').removeClass('active');
+			$('.country .uy').addClass('active');
+			$('.sub button').removeClass('active');
+			$(this).addClass('active');
+		});
+		$('.representaciones .sel-arg').click(function() {
+			$('.representaciones div').removeClass('active');
+			$('.country .arg').addClass('active');
+			$('.sub button').removeClass('active');
+			$(this).addClass('active');
+		});
+		$('.representaciones .sel-py').click(function() {
+			$('.representaciones div').removeClass('active');
+			$('.country .py').addClass('active');
+			$('.sub button').removeClass('active');
+			$(this).addClass('active');
+		});
+	}
+
+//////	Functions	///////
+
+	///	check url
+	function checkUserHref(argument) {
+		return window.location.href.split('/').slice(-1).join();		
+	}
+
+	/// check section visibility
+
+	function sectionVisible(targetSection) {
+		if (checkUserHref() == 'index.html') {
+			var windowHeight = $(window).height();
+			var serviciosOffset = $(targetSection).offset().top;
+			var scrollTop = $(window).scrollTop();
+			typeof scrollTop == 'number' ? scrollTop : scrollTop = 0;
+			return windowHeight > serviciosOffset - scrollTop;
+		}
+	}
+
+
+
+
+
+
+	///	nave
 	function buildSelectNav(dadLi,sonUl,sonLi,buttonTag,selectClass) {
 
 		var navArray = [];
@@ -35,65 +144,7 @@ $(document).ready(function() {
 						+'</option>';
 			$(selectClass).append(option);
 		}
-
-		
-
-
-		console.log(
-
-			);
-	}////////////
-	buildSelectNav('.menuitem', '.submenu', '.submenuitem','a','.smallnav');
-
-
-
-
-
-/////end nave
-
-
-
-//representaciones
-	$('.representaciones .sel-uy').click(function() {
-		$('.representaciones div').removeClass('active');
-		$('.country .uy').addClass('active');
-		$('.sub button').removeClass('active');
-		$(this).addClass('active');
-	});
-	$('.representaciones .sel-arg').click(function() {
-		$('.representaciones div').removeClass('active');
-		$('.country .arg').addClass('active');
-		$('.sub button').removeClass('active');
-		$(this).addClass('active');
-	});
-	$('.representaciones .sel-py').click(function() {
-		$('.representaciones div').removeClass('active');
-		$('.country .py').addClass('active');
-		$('.sub button').removeClass('active');
-		$(this).addClass('active');
-	});
-
-//servicios
-	$('.servicios .thumbs').hover(function() {
-		
-		if ($(window).width()>425) {
-			$('.servicios .active').removeClass('active');
-			$(this).addClass('active');
-		}
-
-
-	});
-
-
-
-$(window).resize(function(event) {
-	if ($(window).width()<=425) {
-	}
-});	
-
-
-
-
+	}///	<< function build select nav
 });
 
 

@@ -1,4 +1,8 @@
 $(document).ready(function() {	
+	
+
+
+
 
 
 	function slider() {
@@ -135,6 +139,7 @@ $(document).ready(function() {
 		slider().dad.css('width', dadWidth() + '%');
 		slider().sons.css('width', sonsWidth() + '%');
 		slider().sons.css('height', (((slider().sonwidth*440)/1024)-10)+'px');
+		stopSliderOnScroll();
 
 	});
 
@@ -178,9 +183,38 @@ $(document).ready(function() {
 
 	
 
-////////////////////
 
 
+
+//////stop slider on scroll
+
+	$(window).scroll(function() {
+		stopSliderOnScroll();
+	});
+
+
+
+	function stopSliderOnScroll() {
+		var offsetslider = $('.slidercontainer').height()+$('.slidercontainer').offset().top;
+		var zeroStop = $(window).scrollTop()-offsetslider;
+		if (zeroStop>0) {
+			sliderPlay=false;
+		}else{
+			sliderPlay=true;
+
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+//////////////////
 
 
 

@@ -968,6 +968,13 @@ html, body {
   100% {
     transform: rotate(1440deg); } }
 
+.scrollhelp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: pink;
+  z-index: 9999999; }
+
 .slidercontainer {
   width: 100%;
   overflow: hidden;
@@ -1017,6 +1024,10 @@ html, body {
       -moz-user-select: none;
       -ms-user-select: none;
       user-select: none; }
+      @media only screen and (max-width: 680px) {
+        .slidercontainer .controls .left p, .slidercontainer .controls .right p {
+          font-size: 2rem;
+          padding: 1.5rem; } }
   .slidercontainer .controls .left {
     left: -5.5rem; }
     .slidercontainer .controls .left p {
@@ -1047,7 +1058,7 @@ html, body {
       position: relative;
       margin: 0.5rem;
       background: rgba(242, 242, 242, 0.4);
-      padding: 0.9rem;
+      padding: 0.6rem;
       cursor: pointer;
       transition: all ease-in-out 1.2s;
       transition: top ease-in-out 0.3s;
@@ -1055,11 +1066,11 @@ html, body {
       top: 0;
       border: 2px solid lightgray; }
       .slidercontainer .imgselectors .sq:hover {
-        padding: 1.1rem;
+        padding: 0.8rem;
         background: rgba(119, 178, 230, 0.8);
         top: 0.05rem; }
     .slidercontainer .imgselectors .active {
-      padding: 1.1rem;
+      padding: 0.8rem;
       background: #4696DD;
       top: 0.05rem; }
       .slidercontainer .imgselectors .active:hover {
@@ -1129,7 +1140,9 @@ html, body {
     width: 33.33333%;
     color: #989898;
     font-weight: bold;
-    font-size: 1.3rem; }
+    font-size: 1.3rem;
+    position: relative;
+    transition: all ease-in-out 0.3s; }
     @media only screen and (max-width: 650px) {
       .servicios .thumbs {
         width: 50%; } }
@@ -1238,7 +1251,11 @@ html, body {
       margin-right: 1rem; }
   .representaciones img {
     margin: 2rem;
-    cursor: pointer; }
+    cursor: pointer;
+    height: 7.5rem; }
+    @media only screen and (max-width: 700px) {
+      .representaciones img {
+        height: 5.5rem; } }
   .representaciones a {
     text-decoration: none;
     color: #4696DD;
@@ -1253,18 +1270,31 @@ html, body {
 
 .contacto {
   text-align: center;
-  margin-top: 7rem;
-  margin-top: 30vh; }
+  margin-top: 7rem; }
   .contacto input, .contacto textarea {
-    width: 70%; }
+    width: 100%;
+    margin-top: 0; }
+  @media only screen and (max-width: 870px) {
+    .contacto textarea {
+      height: 10rem; } }
   .contacto button {
     margin-bottom: 3rem; }
   .contacto hr {
-    width: 70%; }
-  .contacto h3 {
+    width: 100%;
+    display: none; }
+    @media only screen and (max-width: 850px) {
+      .contacto hr {
+        display: block; } }
+  .contacto h3, .contacto h4, .contacto h5, .contacto p {
     color: #4696DD; }
   .contacto .contact-form {
-    margin-top: 2rem; }
+    font-size: 1.3rem;
+    width: 40%;
+    display: inline-block; }
+    @media only screen and (max-width: 870px) {
+      .contacto .contact-form {
+        width: 100%;
+        margin: 0 auto; } }
     .contacto .contact-form button, .contacto .contact-form .button-primary {
       padding: 0 1.5rem;
       background: #4696DD;
@@ -1276,16 +1306,118 @@ html, body {
         border-color: transparent;
         background: #77B2E6;
         border-radius: 1.5rem; }
+  .contacto .businessuy {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1rem; }
+    .contacto .businessuy div {
+      margin: 0; }
+    .contacto .businessuy h5 {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 3rem; }
+    .contacto .businessuy .businessmap {
+      vertical-align: top;
+      display: inline-block;
+      width: 90%;
+      text-align: right;
+      margin-bottom: 2rem; }
+    .contacto .businessuy .businessinfo {
+      vertical-align: top;
+      display: inline-block;
+      width: 50%;
+      margin: 0 auto;
+      text-align: left; }
+      @media only screen and (max-width: 870px) {
+        .contacto .businessuy .businessinfo {
+          width: 80%; } }
+      .contacto .businessuy .businessinfo a {
+        color: #4696DD;
+        text-decoration: none; }
+      .contacto .businessuy .businessinfo ul {
+        width: 100%;
+        list-style: none;
+        text-align: left;
+        margin-top: 2rem; }
+        @media only screen and (max-width: 870px) {
+          .contacto .businessuy .businessinfo ul {
+            text-align: center; } }
+        .contacto .businessuy .businessinfo ul li {
+          margin: 0 0 4rem 0;
+            margin-margin: 1rem; }
+          .contacto .businessuy .businessinfo ul li br {
+            display: none; }
+            @media only screen and (max-width: 1100px) {
+              .contacto .businessuy .businessinfo ul li br {
+                display: none; } }
+      .contacto .businessuy .businessinfo .bustext {
+        position: relative;
+        bottom: 0.2rem;
+        text-align: center; }
+      .contacto .businessuy .businessinfo span {
+        color: #989898;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        font-weight: bold;
+        font-size: 1.2rem; }
+        @media only screen and (max-width: 1100px) {
+          .contacto .businessuy .businessinfo span {
+            font-size: 1.2rem; } }
+        .contacto .businessuy .businessinfo span span {
+          margin-left: 0;
+          margin-right: 0;
+          color: #4696DD; }
+      .contacto .businessuy .businessinfo i {
+        color: #4696DD;
+        margin: 0 auto; }
 
-.footer {
-  margin-left: 1rem;
-  background: #77B2E6;
-  color: white;
-  margin: 0;
-  height: 4.5rem; }
-  .footer p {
-    position: absolute;
-    margin-top: 1rem;
-    margin-left: 1rem;
-    margin-bottom: 0;
-    font-weight: bold; }
+.footer footer {
+  width: 100%;
+  background: #4696DD;
+  position: relative; }
+  .footer footer .wrapper {
+    width: 90%;
+    overflow: auto;
+    margin: 0 auto; }
+    .footer footer .wrapper .footercont {
+      width: 100%;
+      text-align: center; }
+      .footer footer .wrapper .footercont .buttons {
+        width: 100%;
+        margin: 1rem 0; }
+        .footer footer .wrapper .footercont .buttons ul {
+          list-style: none;
+          width: 100%;
+          margin: 0 auto;
+          padding: 0; }
+          .footer footer .wrapper .footercont .buttons ul li {
+            display: inline-block;
+            margin: 0 1rem; }
+            .footer footer .wrapper .footercont .buttons ul li a {
+              color: #F2F2F2;
+              text-decoration: none;
+              font-size: 1.3rem;
+              margin: 0 auto; }
+              .footer footer .wrapper .footercont .buttons ul li a:hover {
+                text-decoration: underline; }
+      .footer footer .wrapper .footercont .dir p {
+        color: #F2F2F2;
+        font-size: 1.1rem;
+        margin-bottom: 0;
+        margin-top: 1rem; }
+        .footer footer .wrapper .footercont .dir p span {
+          font-weight: bold; }
+      .footer footer .wrapper .footercont .copy p {
+        margin: 1.5rem;
+        margin-top: 0.3rem;
+        color: #F2F2F2;
+        font-size: 1.1rem;
+        margin-bottom: 0; }
+        .footer footer .wrapper .footercont .copy p span {
+          font-weight: bold;
+          font-size: 1.3rem; }
+      .footer footer .wrapper .footercont br {
+        display: none; }
+        @media only screen and (max-width: 410px) {
+          .footer footer .wrapper .footercont br {
+            display: inline-block; } }
