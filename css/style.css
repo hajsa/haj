@@ -1421,3 +1421,49 @@ html, body {
         @media only screen and (max-width: 410px) {
           .footer footer .wrapper .footercont br {
             display: inline-block; } }
+
+.nosotros {
+  margin-top: 9rem; }
+  .nosotros h3 {
+    color: #4696DD;
+    text-align: center; }
+  .nosotros hr {
+    width: 70%; }
+  .nosotros p {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #989898;
+    font-size: 1.5rem; }
+    @media only screen and (max-width: 600px) {
+      .nosotros p {
+        width: 90%; } }
+    .nosotros p strong {
+      color: #4696DD;
+      font-size: 1.6rem; }
+  .nosotros .businessmap {
+    text-align: center; }
+    .nosotros .businessmap iframe {
+      width: 70%; }
+      @media only screen and (max-width: 600px) {
+        .nosotros .businessmap iframe {
+          width: 90%; } }
+  .nosotros .businessinfo {
+    margin-top: 3rem; }
+    .nosotros .businessinfo table {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center; }
+      .nosotros .businessinfo table th {
+        color: #4696DD;
+        font-size: 1.7rem;
+        text-align: center; }
+      .nosotros .businessinfo table i {
+        color: #4696DD; }
+      .nosotros .businessinfo table a {
+        color: #4696DD;
+        text-decoration: none; }
+        .nosotros .businessinfo table a:hover {
+          text-decoration: underline; }
+      .nosotros .businessinfo table strong {
+        color: #4696DD; }

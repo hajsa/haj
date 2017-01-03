@@ -3,8 +3,6 @@ $(document).ready(function() {
 
 
 
-
-
 	function slider() {
 		return {
 		
@@ -131,8 +129,6 @@ $(document).ready(function() {
 	});
 
 ////////////			resizing
-
-
 
 
 	$(window).resize(function(event) {

@@ -6,7 +6,6 @@ $(document).ready(function() {
 	var navlangbutton = $('.nave .lang').html();
 
 
-
 //////	TRY AND ERROR	///////
 
 
