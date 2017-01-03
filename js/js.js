@@ -10,6 +10,7 @@ $(document).ready(function() {
 
 
 
+
 ////////////////////////////////////////////////////////////////////////////////////////////////
 //////	reload page
 	//setTimeout(location.reload(), 10000);
@@ -91,7 +92,12 @@ $(document).ready(function() {
 
 	///	check url
 	function checkUserHref(argument) {
-		return window.location.href.split('/').slice(-1).join();		
+		var href;		
+		href = window.location.href.split('/').slice(-1).join();
+		if (href=='') {
+			href = 'index.html'
+		}
+		return href;
 	}
 
 	/// check section visibility
