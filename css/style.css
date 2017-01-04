@@ -1270,7 +1270,7 @@ html, body {
 
 .contacto {
   text-align: center;
-  margin-top: 7rem; }
+  margin-top: 9rem; }
   .contacto input, .contacto textarea {
     width: 100%;
     margin-top: 0; }
@@ -1285,7 +1285,7 @@ html, body {
     @media only screen and (max-width: 850px) {
       .contacto hr {
         display: block; } }
-  .contacto h3, .contacto h4, .contacto h5, .contacto p {
+  .contacto h3, .contacto h4, .contacto h5, .contacto p, .contacto .title {
     color: #4696DD; }
   .contacto .contact-form {
     font-size: 1.3rem;
@@ -1424,7 +1424,7 @@ html, body {
 
 .nosotros {
   margin-top: 9rem; }
-  .nosotros h3 {
+  .nosotros .title {
     color: #4696DD;
     text-align: center; }
   .nosotros hr {
@@ -1467,3 +1467,53 @@ html, body {
           text-decoration: underline; }
       .nosotros .businessinfo table strong {
         color: #4696DD; }
+
+.productos {
+  margin-top: 5.3rem; }
+  .productos .breadcrums {
+    position: absolute;
+    width: 80%;
+    color: #4696DD;
+    top: 6rem;
+    z-index: 9999; }
+    .productos .breadcrums a {
+      text-decoration: none;
+      padding: 1rem; }
+      .productos .breadcrums a:hover {
+        text-decoration: underline; }
+  .productos .hero {
+    background: rgba(70, 150, 221, 0.2);
+    width: 100%;
+    height: 40rem;
+    top: 5.4rem;
+    overflow: auto; }
+    .productos .hero .title {
+      color: #4696DD;
+      font-weight: bold;
+      font-size: 8rem;
+      text-align: center;
+      margin-top: 5rem; }
+  .productos .thumb-wrapper {
+    margin-top: -25rem; }
+    .productos .thumb-wrapper .thumbs {
+      background: white;
+      width: 60%;
+      border: 2px solid #F2F2F2;
+      margin: 4rem auto;
+      color: #4696DD;
+      text-align: center;
+      overflow: auto; }
+      .productos .thumb-wrapper .thumbs .title {
+        margin-top: 2rem; }
+      .productos .thumb-wrapper .thumbs hr {
+        margin-bottom: 0; }
+      .productos .thumb-wrapper .thumbs img {
+        width: 100%;
+        margin: 0;
+        font-size: 0; }
+      .productos .thumb-wrapper .thumbs .button {
+        background: #4696DD;
+        border: none;
+        margin-top: 1rem; }
+        .productos .thumb-wrapper .thumbs .button:hover {
+          background: #77B2E6; }
