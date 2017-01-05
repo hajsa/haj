@@ -857,6 +857,35 @@ html, body {
 .hide {
   display: none; }
 
+.breadcrums {
+  position: fixed;
+  color: #4696DD;
+  top: 5.4rem;
+  left: 0;
+  z-index: 9999;
+  font-size: 0;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background: white;
+  border: 1px solid #E0E0E0; }
+  .breadcrums .next {
+    font-size: 0;
+    margin: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 0.5rem solid transparent;
+    border-top: 0.5rem solid transparent;
+    border-left: 0.8rem solid #4696DD;
+    display: inline-block; }
+  .breadcrums a {
+    text-decoration: none;
+    padding: 1rem;
+    font-size: 1.3rem;
+    position: relative;
+    bottom: 0.1rem; }
+    .breadcrums a:hover {
+      text-decoration: underline; }
+
 .nave {
   position: fixed;
   top: 0rem;
@@ -900,6 +929,8 @@ html, body {
             width: 90px;
             top: 1.8rem; } }
     .nave .whiter .buttons {
+      position: relative;
+      z-index: 8888;
       display: inline-block; }
       @media only screen and (max-width: 925px) {
         .nave .whiter .buttons {
@@ -1470,50 +1501,61 @@ html, body {
 
 .productos {
   margin-top: 5.3rem; }
-  .productos .breadcrums {
-    position: absolute;
-    width: 80%;
-    color: #4696DD;
-    top: 6rem;
-    z-index: 9999; }
-    .productos .breadcrums a {
-      text-decoration: none;
-      padding: 1rem; }
-      .productos .breadcrums a:hover {
-        text-decoration: underline; }
   .productos .hero {
-    background: rgba(70, 150, 221, 0.2);
     width: 100%;
-    height: 40rem;
     top: 5.4rem;
-    overflow: auto; }
+    overflow: auto;
+    background: #4696DD; }
     .productos .hero .title {
-      color: #4696DD;
+      color: white;
       font-weight: bold;
-      font-size: 8rem;
+      font-size: 6rem;
       text-align: center;
-      margin-top: 5rem; }
+      margin-top: 5rem;
+      margin-bottom: 5rem; }
   .productos .thumb-wrapper {
-    margin-top: -25rem; }
+    width: 100%;
+    font-size: 0;
+    text-align: center; }
     .productos .thumb-wrapper .thumbs {
       background: white;
-      width: 60%;
-      border: 2px solid #F2F2F2;
-      margin: 4rem auto;
+      width: 33.33333%;
+      min-width: 30rem;
+      padding: 0;
+      font-size: 0;
+      display: inline-block;
       color: #4696DD;
       text-align: center;
-      overflow: auto; }
+      margin-bottom: 3rem;
+      vertical-align: top; }
       .productos .thumb-wrapper .thumbs .title {
-        margin-top: 2rem; }
+        margin-top: 2rem;
+        text-decoration: none; }
+        .productos .thumb-wrapper .thumbs .title:hover {
+          text-decoration: underline; }
       .productos .thumb-wrapper .thumbs hr {
-        margin-bottom: 0; }
-      .productos .thumb-wrapper .thumbs img {
-        width: 100%;
-        margin: 0;
-        font-size: 0; }
+        width: 80%;
+        margin: 2rem auto; }
+      .productos .thumb-wrapper .thumbs .textcont p {
+        margin: 2rem auto;
+        text-align: center;
+        width: 80%;
+        font-size: 1.4rem; }
+      .productos .thumb-wrapper .thumbs .imgcont {
+        background: red;
+        width: 80%;
+        max-width: 40rem;
+        min-width: 30rem;
+        max-height: 20rem;
+        overflow: hidden;
+        margin: 0 auto; }
+        .productos .thumb-wrapper .thumbs .imgcont img {
+          width: 100%;
+          margin: 0;
+          font-size: 0; }
       .productos .thumb-wrapper .thumbs .button {
         background: #4696DD;
         border: none;
-        margin-top: 1rem; }
+        margin: 0; }
         .productos .thumb-wrapper .thumbs .button:hover {
           background: #77B2E6; }
